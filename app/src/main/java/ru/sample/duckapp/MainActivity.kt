@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         circularProgressDrawable.centerRadius = 30f
         circularProgressDrawable.start()
 
-
         button.setOnClickListener {
             var inputNumber = 0;
             try {
@@ -39,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             Glide.with(this)
                 .load(imgUrl)
                 .placeholder(circularProgressDrawable)
+                .error(R.drawable.image_not_found_icon)
                 .into(imageView)
         }
 
